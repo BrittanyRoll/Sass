@@ -1,0 +1,35 @@
+@import 'bourbon/bourbon';
+
+$font: Helvetica, sans-serif;
+$border: 3px solid blue;
+
+body{
+	background: tint(blue, 50%); /*make bg mix of blue and white*/
+	border: $border;
+}
+
+// nesting example
+nav{
+	color: red;
+	margin-top: 50px;
+
+		li{
+			list-style-type: none;
+			float: left;
+			border: $border;
+			background-color: purple;
+		}
+}
+
+#heading{
+	color: purple;
+}
+
+.p1{
+	font: 100% $font; 
+}
+
+.head2{
+	@extend .p1;
+	font-family: Georgia;
+}
